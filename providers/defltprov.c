@@ -144,6 +144,9 @@ static const OSSL_ALGORITHM deflt_digests[] = {
     { PROV_NAMES_BLAKE2S_256, "provider=default", ossl_blake2s256_functions },
     { PROV_NAMES_BLAKE2B_512, "provider=default", ossl_blake2b512_functions },
 #endif /* OPENSSL_NO_BLAKE2 */
+#ifndef OPENSSL_NO_BLAKE3
+    { PROV_NAMES_BLAKE3, "provider=default", ossl_blake3_functions },
+#endif /* OPENSSL_NO_BLAKE3 */
 
 #ifndef OPENSSL_NO_SM3
     { PROV_NAMES_SM3, "provider=default", ossl_sm3_functions },

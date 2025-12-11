@@ -7,6 +7,7 @@ $SHA1_GOAL=../../libdefault.a ../../libfips.a
 $SHA2_GOAL=../../libdefault.a ../../libfips.a
 $SHA3_GOAL=../../libdefault.a ../../libfips.a
 $BLAKE2_GOAL=../../libdefault.a
+$BLAKE3_GOAL=../../libdefault.a
 $SM3_GOAL=../../libdefault.a
 $MD5_GOAL=../../libdefault.a
 $NULL_GOAL=../../libdefault.a
@@ -31,6 +32,11 @@ SOURCE[$NULL_GOAL]=null_prov.c
 
 IF[{- !$disabled{blake2} -}]
   SOURCE[$BLAKE2_GOAL]=blake2_prov.c blake2b_prov.c blake2s_prov.c
+ENDIF
+
+IF[{- !$disabled{blake3} -}]
+  SOURCE[$BLAKE3_GOAL]=blake3.c blake3_dispatch.c blake3_portable.c \
+                       blake3_prov.c
 ENDIF
 
 IF[{- !$disabled{sm3} -}]

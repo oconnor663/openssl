@@ -1,0 +1,19 @@
+
+# Tests start with one of these keywords
+#       Cipher Decrypt Derive Digest Encoding KDF MAC PBE
+#       PrivPubKeyPair Sign Verify VerifyRecover
+# and continue until a blank line. Lines starting with a pound sign are ignored.
+
+Title = BLAKE3 tests (32-byte digests)
+
+Digest = BLAKE3
+Input =
+Output = af1349b9f5f9a1a6a0404dea36dcc9499bcb25c9adc112b7cc9a93cae41f3262
+
+Digest = BLAKE3
+Input = 00
+Output = 2d3adedff11b61f14c886e35afa036736dcd87a74d27b5c1510225d0f592e213
+
+Digest = BLAKE3
+Input = 0001
+Output = 7b7015bb92cf0b318037702a6cdd81dee41224f734684c2c122cd6359cb1ee63

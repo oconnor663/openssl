@@ -65,6 +65,8 @@ The OpenSSL default provider supports these operations and algorithms:
 
 =item BLAKE2, see L<EVP_MD-BLAKE2(7)>
 
+=item BLAKE3, see L<EVP_MD-BLAKE3(7)>
+
 =item SM3, see L<EVP_MD-SM3(7)>
 
 =item MD5, see L<EVP_MD-MD5(7)>
